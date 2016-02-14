@@ -2,17 +2,17 @@ import random
 
 
 def allocate_money(total, num):
-    # 初始化总金额(total，保留2位小数），分配份数（num，取整） 
+    # 初始化总金额(total，保留2位小数），分配份数（num，取整）
     total = round(total, 2)
     num = int(num)
     if total <= 0 or num <= 0 or total > 200 or num > 200:
         return
 
     # 初始化列表，为每一个列表元素分配一个随机量
-    result = [random.random() for no in range(num)]
     # 总金额除以列表元素随机量总和，得到计算基数
-    total_base = total/sum(result)
     # 计算基数乘以每一个列表元素随机量，得到一份随机分配金额 
+    result = [random.random() for no in range(num)]
+    total_base = total/sum(result)
     for no in range(num):
         result[no] = round(total_base*result[no], 2)
 
