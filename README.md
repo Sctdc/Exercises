@@ -1,1 +1,1 @@
-Python & C# 练习集
+Python 代码练习集
