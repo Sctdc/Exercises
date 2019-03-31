@@ -3,12 +3,8 @@ import random, datetime, copy
 
 # 测试样本
 def fill_list(n):
-    x = [] 
-    
-    for i in range(n):
-        x.append(round(random.random()*100, 2))
 
-    return x
+    return [random.random() for i in range(n)] 
 
 
 # 冒泡排序
@@ -50,15 +46,15 @@ def quick_sort_2(x):
         return x
     else:
         key = x[0]
-        less, equal, greater = [], [key], []
+        smaller, equal, bigger = [], [key], []
         for m in x[1:]:
             if m < key:
-                less.append(m)         
+                smaller.append(m)         
             elif m > key:
-                greater.append(m)    
+                bigger.append(m)    
             else:
                 equal.append(m)
-        return quick_sort_2(less) + equal + quick_sort_2(greater)
+        return quick_sort_2(smaller) + equal + quick_sort_2(bigger)
 
 
 list_1 = fill_list(5000)
