@@ -21,6 +21,7 @@ def allocate_money(total, num):
 
     return result
 
+
 if __name__ == "__main__":
     total = 18
     num = 6
