@@ -40,7 +40,7 @@ def quick_sort_1(x, left, right):
     quick_sort_1(x, left, i-1)
     quick_sort_1(x, i+1, right)
 
-# Pythonic写法
+# Pyer写法
 def quick_sort_2(x):
     if len(x) < 2:
         return x
