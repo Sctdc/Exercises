@@ -8,7 +8,9 @@ option_no = 0
 rows = []
 header = ['题干','题型','选择项1','选择项2','选择项3','选择项4','解析','答案','得分']
 
-
+'''
+注意：doc.txt为gbk编码，比较适合windows平台使用，哈哈哈
+'''
 with open('doc.txt') as f:
     for line in f:
         '''
